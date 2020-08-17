@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.heisenburg.nested.R
 import com.heisenburg.nested.custom.model.Item
+import kotlinx.android.synthetic.main.item_scroll.view.*
 
 class ViewAdapter(val context: Context, val item: Item): RecyclerView.Adapter<ViewAdapter.Holder>() {
 
@@ -28,6 +29,6 @@ class ViewAdapter(val context: Context, val item: Item): RecyclerView.Adapter<Vi
     }
 
     override fun onBindViewHolder(holder: Holder, position: Int) {
-
+        holder.itemView.text.text = "" + position
     }
 }

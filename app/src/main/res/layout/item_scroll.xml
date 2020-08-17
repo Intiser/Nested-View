@@ -8,11 +8,20 @@
         android:layout_width="2dp"
         android:layout_height="100dp"/>
 
-    <View
+    <RelativeLayout
         android:layout_width="20dp"
         android:layout_height="100dp"
-        android:background="#555"
-        />
+        android:background="#555">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+
+
+    </RelativeLayout>
 
     <View
         android:layout_width="2dp"

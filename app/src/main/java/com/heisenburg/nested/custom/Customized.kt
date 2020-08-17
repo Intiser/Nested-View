@@ -16,9 +16,6 @@ class Customized @JvmOverloads constructor(
 
     init {
         Log.d("TAG", "mes : init")
-//        items.add(Item(100))
-//        items.add(Item(100))
-//        items.add(Item(100))
         setupRecyclerView()
     }
 
@@ -32,8 +29,11 @@ class Customized @JvmOverloads constructor(
     }
 
     public fun addItem(){
-        items.add(Item(100))
+        items.add(Item(100, 0))
         adapterz?.setDataArray(items)
+    }
 
+    fun setProgress(progressPx: Int) {
+        adapterz?.setProgress(progressPx)
     }
 }

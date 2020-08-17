@@ -43,7 +43,14 @@ class ListAdapter(val context: Context): RecyclerView.Adapter<ListAdapter.Holder
             RecyclerView.HORIZONTAL, false)
         holder.itemView.recyclerview.adapter = ViewAdapter(context, data.get(position))
         holder.itemView.recyclerview.isNestedScrollingEnabled = false
-        Log.d("TAG", " bind " + position)
+        holder.itemView.recyclerview.smoothScrollBy( data.get(position).progress,0)
+    }
+
+    fun setProgress(progressPx: Int) {
+        for(item: Item  in data){
+            item.progress = progressPx
+        }
+        notifyDataSetChanged()
     }
 
 }
